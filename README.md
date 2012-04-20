@@ -16,25 +16,25 @@ I just tested it with a recent GCC.
 ##How to walk the path to enlightment
 1. Get the sources
 
-       git clone git://github.com/torbjoernk/CppKoans.git
+        git clone git://github.com/torbjoernk/CppKoans.git
 
 2. Create a build directory
 
-       cd CppKoans
-       mkdir build
-       cd build
+        cd CppKoans
+        mkdir build
+        cd build
 
 3. Configure the build
 
-       cmake ..
+        cmake ..
 
 4. Compile
 
-       make
+        make
 
 5. Run
 
-       ./CppKoans
+        ./CppKoans
 
 
 Now follow the instructions printed from the very beginning.
