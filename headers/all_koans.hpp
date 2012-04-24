@@ -23,9 +23,7 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include <iostream>
-#include <cassert>
-
-#define FILL_THE_NUMBER_IN 1
+#include "koan00_get_started.hpp"
+#include "koan01_variable_types.hpp"
 
 // EOF

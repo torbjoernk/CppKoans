@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2012 Torbjörn Klatt <opensource@torbjoern-klatt.de>
+    Copyright (c) 2012 <copyright holder> <email>
 
     Permission is hereby granted, free of charge, to any person
     obtaining a copy of this software and associated documentation
@@ -23,9 +23,41 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include <iostream>
-#include <cassert>
+#include "../helper.hpp"
 
-#define FILL_THE_NUMBER_IN 1
+#ifndef KOAN00_GET_STARTED_HPP
+#define KOAN00_GET_STARTED_HPP
+
+using namespace std;
+
+class Koan00_get_started
+{
+  private:
+    static const int num_tests = 1;
+    int num_passed;
+    int num_failed;
+
+  public:
+    Koan00_get_started() : num_passed(0), num_failed(0) {}
+    ~Koan00_get_started() {}
+
+    int run() {
+      num_passed = num_failed = 0;
+      
+      cpp_is_not_too_hard();
+      num_passed++;
+
+      return num_passed;
+    }
+
+    static int get_num_tests() {
+      return num_tests;
+    }
+
+  private:
+    void cpp_is_not_too_hard();
+};
+
+#endif // KOAN00_GET_STARTED_HPP
 
 // EOF

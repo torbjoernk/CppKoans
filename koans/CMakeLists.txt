@@ -2,7 +2,7 @@
 
 set(cppkoans_SOURCES
   ${cppkoans_SOURCES}
-  ${PROJECT_SOURCE_DIR}/koans/00_the_start.cpp
-  ${PROJECT_SOURCE_DIR}/koans/01_variable_types.cpp
+  ${PROJECT_SOURCE_DIR}/koans/koan00_get_started.cpp
+  ${PROJECT_SOURCE_DIR}/koans/koan01_variable_types.cpp
   PARENT_SCOPE
 )
