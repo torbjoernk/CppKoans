@@ -45,6 +45,9 @@ int main()
   // Koan 02: character types
   Koan02_character_types koan02 = Koan02_character_types( &status );
 
+  // Koan 03: further types
+  Koan03_further_types koan03 = Koan03_further_types( &status );
+
   // Welcome message
   status.start();
 
@@ -52,6 +55,7 @@ int main()
   koan00.run();
   koan01.run();
   koan02.run();
+  koan03.run();
 
   // Done.
   return( 0 );

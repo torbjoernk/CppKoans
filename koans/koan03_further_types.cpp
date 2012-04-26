@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2012 Torbjörn Klatt <opensource@torbjoern-klatt.de>
+    Copyright (c) 2012 <copyright holder> <email>
 
     Permission is hereby granted, free of charge, to any person
     obtaining a copy of this software and associated documentation
@@ -23,9 +23,16 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include "koan00_get_started.hpp"
-#include "koan01_number_types.hpp"
-#include "koan02_character_types.hpp"
-#include "koan03_further_types.hpp"
+
+#include "../headers/koan03_further_types.hpp"
+
+void Koan03_further_types::the_truth_has_a_name()
+{
+  bool wrong = false;
+  ASSERT( wrong );
+  bool truth = true;
+  ASSERT( !truth );
+}
+
 
 // EOF

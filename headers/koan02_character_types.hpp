@@ -32,7 +32,7 @@ class Koan02_character_types : Koan
 {
   private:
     KoanHandler *status;                //!
-    static const int num_tests = 3;     //!
+    static const int num_tests = 4;     //!
 
   public:
     /**
@@ -53,6 +53,7 @@ class Koan02_character_types : Koan
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan02_character_types::lonely_characters ) );
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan02_character_types::chars_have_a_size ) );
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan02_character_types::chars_are_numbers ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan02_character_types::more_characters_are_strings ) );
       
       status->episode_done( "third" );
     }
@@ -69,6 +70,7 @@ class Koan02_character_types : Koan
     void lonely_characters();
     void chars_have_a_size();
     void chars_are_numbers();
+    void more_characters_are_strings();
 };
 
 #endif // KOAN02_CHARACTER_TYPES_HPP
