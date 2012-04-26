@@ -75,7 +75,7 @@ void KoanHandler::print_failure( string file, int line, string msg )
        << line << "." << endl
        << endl
        << "You mastered " << this->total_num_passed << " of "
-       << this->total_num_koans << " koans." << "Keep going!" << endl;
+       << this->total_num_koans << " koans. Keep going!" << endl;
 }
 
 // EOF
