@@ -24,6 +24,6 @@
 */
 
 #include "koan00_get_started.hpp"
-#include "koan01_variable_types.hpp"
+#include "koan01_number_types.hpp"
 
 // EOF

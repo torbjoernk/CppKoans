@@ -24,55 +24,55 @@
 */
 
 
-#include "../headers/koan01_variable_types.hpp"
+#include "../headers/koan01_number_types.hpp"
 
-void Koan01_variable_types::simple_integer_numbers()
+void Koan01_number_types::simple_integer_numbers()
 {
   int an_integer = 42;
   ASSERT( an_integer == FILL_THE_NUMBER_IN );
 }
 
-void Koan01_variable_types::integers_have_a_size()
+void Koan01_number_types::integers_have_a_size()
 {
   int an_integer = 1;
   ASSERT( sizeof( int ) == FILL_THE_NUMBER_IN );
   ASSERT( sizeof( an_integer ) == FILL_THE_NUMBER_IN );
 }
 
-void Koan01_variable_types::integers_can_be_negative()
+void Koan01_number_types::integers_can_be_negative()
 {
   int an_integer = 42;
   int another_integer = -42;
   ASSERT( an_integer < another_integer );
 }
 
-void Koan01_variable_types::simple_floats()
+void Koan01_number_types::simple_floats()
 {
   float a_float = 4.2;
   ASSERT( a_float == FILL_THE_NUMBER_IN );
 }
 
-void Koan01_variable_types::floats_have_a_size()
+void Koan01_number_types::floats_have_a_size()
 {
   int a_float = 4.2;
   ASSERT( sizeof( float ) == FILL_THE_NUMBER_IN );
   ASSERT( sizeof( a_float ) == FILL_THE_NUMBER_IN );
 }
 
-void Koan01_variable_types::going_double_precision()
+void Koan01_number_types::going_double_precision()
 {
   double a_famous_double = 3.1415926535897932;
   ASSERT_MSG( a_famous_double == FILL_THE_NUMBER_IN, "You know that number." );
 }
 
-void Koan01_variable_types::doubles_have_a_size()
+void Koan01_number_types::doubles_have_a_size()
 {
   double a_famous_double = 3.1415926535897932;
   ASSERT( sizeof( double ) == FILL_THE_NUMBER_IN );
   ASSERT( sizeof( a_famous_double ) == FILL_THE_NUMBER_IN );
 }
 
-void Koan01_variable_types::size_of_biggest_number()
+void Koan01_number_types::size_of_biggest_number()
 {
   // Remember: The size of long doubles vary from system to system.
   long double a_long_double = 4.2;

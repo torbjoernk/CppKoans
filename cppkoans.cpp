@@ -40,7 +40,7 @@ int main()
   Koan00_get_started koan00 = Koan00_get_started( &status );
 
   // Koan 01: variable types
-  Koan01_variable_types koan01 = Koan01_variable_types( &status );
+  Koan01_number_types koan01 = Koan01_number_types( &status );
 
   // Welcome message
   status.start();

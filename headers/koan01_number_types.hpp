@@ -25,13 +25,13 @@
 
 #include "../helper.hpp"
 
-#ifndef KOAN01_VARIABLE_TYPES_HPP
-#define KOAN01_VARIABLE_TYPES_HPP
+#ifndef KOAN01_NUMBER_TYPES_HPP
+#define KOAN01_NUMBER_TYPES_HPP
 
 /**
  *
  */
-class Koan01_variable_types : Koan
+class Koan01_number_types : Koan
 {
   private:
     KoanHandler *status;                //!
@@ -41,26 +41,26 @@ class Koan01_variable_types : Koan
     /**
      *
      */
-    Koan01_variable_types( KoanHandler *status ) : status( status ) {
+    Koan01_number_types( KoanHandler *status ) : status( status ) {
       status->register_koans( num_tests );
     }
     /**
      *
      */
-    ~Koan01_variable_types() {}
+    ~Koan01_number_types() {}
 
     /**
      *
      */
     void run() {
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_variable_types::simple_integer_numbers ) );
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_variable_types::integers_have_a_size ) );
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_variable_types::integers_can_be_negative ) );
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_variable_types::simple_floats ) );
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_variable_types::floats_have_a_size ) );
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_variable_types::going_double_precision ) );
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_variable_types::doubles_have_a_size ) );
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_variable_types::size_of_biggest_number ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_number_types::simple_integer_numbers ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_number_types::integers_have_a_size ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_number_types::integers_can_be_negative ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_number_types::simple_floats ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_number_types::floats_have_a_size ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_number_types::going_double_precision ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_number_types::doubles_have_a_size ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_number_types::size_of_biggest_number ) );
 
       status->episode_done( "second" );
     }
@@ -84,6 +84,6 @@ class Koan01_variable_types : Koan
     void size_of_biggest_number();
 };
 
-#endif // KOAN01_VARIABLE_TYPES_HPP
+#endif // KOAN01_NUMBER_TYPES_HPP
 
 // EOF
