@@ -7,8 +7,7 @@ such koans for C/C++.
 Some ideas were taken from [PointerKoans](https://github.com/paytonrules/PointerKoan).
 
 ###Prerequesites
-You will need [CMake](http://cmake.org/) and the 
-[Boost Unit Testing Framework (UTF)](http://www.boost.org/doc/libs/1_49_0/libs/test/doc/html/index.html).
+You will need [CMake](http://cmake.org/).
 
 And of course a C++ compiler.
 I just tested it with a recent GCC.
@@ -51,5 +50,5 @@ Thus, walking the path to enlightment is a repetition of these steps:
 
 
 ##Licence
-Not yet defined. Will come soon.
-
+MIT License
+Copyright 2012 Torbjörn Klatt <opensource eht torbjoern minus klatt dot de>
