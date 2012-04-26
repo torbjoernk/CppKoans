@@ -23,12 +23,13 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include "koan00_get_started.hpp"
-#include "koan01_number_types.hpp"
-#include "koan02_character_types.hpp"
-#include "koan03_further_types.hpp"
-#include "koan04_arrays.hpp"
-// When an episode of koans is added, it must be appended here
-// #include "koanXX_sample_koans.hpp"
+#include "../headers/koan04_arrays.hpp"
+
+void Koan04_arrays::listing_things()
+{
+  int two_numbers[] = { 3, 4 };
+  // You should use two_numbers to retreive the value
+  ASSERT_EQUAL( 3, FILL_THE_NUMBER_IN );
+}
 
 // EOF

@@ -48,6 +48,12 @@ int main()
   // Koan 03: further types
   Koan03_further_types koan03 = Koan03_further_types( &status );
 
+  // Koan 04: arrays
+  Koan04_arrays koan04 = Koan04_arrays( &status );
+
+  // Koan XX: sample koans
+//   KoanXX_sample_koans koanXX = KoanXX_sample_koans( &status );
+
   // Welcome message
   status.start();
 
@@ -56,6 +62,8 @@ int main()
   koan01.run();
   koan02.run();
   koan03.run();
+  koan04.run();
+//   koanXX.run();
 
   // Done.
   return( 0 );

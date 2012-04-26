@@ -23,12 +23,15 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include "koan00_get_started.hpp"
-#include "koan01_number_types.hpp"
-#include "koan02_character_types.hpp"
-#include "koan03_further_types.hpp"
-#include "koan04_arrays.hpp"
-// When an episode of koans is added, it must be appended here
-// #include "koanXX_sample_koans.hpp"
+#include "../headers/koanXX_sample_koans.hpp"
+
+// The implementations of the different koans of this episode is done here.
+// Don't forget to rename the above include.
+
+void KoanXX_sample_koans::a_sample_koan()
+{
+  bool test = false;
+  ASSERT_EQUAL( test, true );
+}
 
 // EOF

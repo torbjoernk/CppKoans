@@ -23,12 +23,50 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include "koan00_get_started.hpp"
-#include "koan01_number_types.hpp"
-#include "koan02_character_types.hpp"
-#include "koan03_further_types.hpp"
-#include "koan04_arrays.hpp"
-// When an episode of koans is added, it must be appended here
-// #include "koanXX_sample_koans.hpp"
+#include "../helper.hpp"
+
+#ifndef KOAN04_ARRAYS_HPP
+#define KOAN04_ARRAYS_HPP
+
+class Koan04_arrays : Koan
+{
+  private:
+    KoanHandler *status;                //!
+    static const int num_tests = 1;     //!
+
+  public:
+    /**
+     *
+     */
+    Koan04_arrays( KoanHandler *status ) : status( status ) {
+      status->register_koans( num_tests );
+    }
+    /**
+     *
+     */
+    ~Koan04_arrays() {}
+
+    /**
+     *
+     */
+    void run() {
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan04_arrays::listing_things ) );
+
+      status->episode_done( "fourth" );
+    }
+
+    /**
+     *
+     */
+    static int get_num_tests() {
+      return num_tests;
+    }
+
+  private:
+    // REMARK: Do not forget to increase this.num_tests when you add another koan
+    void listing_things();
+};
+
+#endif // KOAN04_ARRAYS_HPP
 
 // EOF
