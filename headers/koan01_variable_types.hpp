@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2012 <copyright holder> <email>
+    Copyright (c) 2012 Torbjörn Klatt <opensource@torbjoern-klatt.de>
 
     Permission is hereby granted, free of charge, to any person
     obtaining a copy of this software and associated documentation
@@ -28,52 +28,52 @@
 #ifndef KOAN01_VARIABLE_TYPES_HPP
 #define KOAN01_VARIABLE_TYPES_HPP
 
-class Koan01_variable_types
+/**
+ *
+ */
+class Koan01_variable_types : Koan
 {
   private:
-    static const int num_tests = 8;
-    int num_passed;
-    int num_failed;
+    KoanHandler *status;                //!
+    static const int num_tests = 8;     //!
 
   public:
-    Koan01_variable_types() : num_passed(0), num_failed(0) {}
-    virtual ~Koan01_variable_types() {}
+    /**
+     *
+     */
+    Koan01_variable_types( KoanHandler *status ) : status( status ) {
+      status->register_koans( num_tests );
+    }
+    /**
+     *
+     */
+    ~Koan01_variable_types() {}
 
-    int run() {
-      num_passed = num_failed = 0;
+    /**
+     *
+     */
+    void run() {
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_variable_types::simple_integer_numbers ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_variable_types::integers_have_a_size ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_variable_types::integers_can_be_negative ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_variable_types::simple_floats ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_variable_types::floats_have_a_size ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_variable_types::going_double_precision ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_variable_types::doubles_have_a_size ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_variable_types::size_of_biggest_number ) );
 
-      simple_integer_numbers();
-      num_passed++;
-
-      integers_have_a_size();
-      num_passed++;
-
-      integers_can_be_negative();
-      num_passed++;
-
-      simple_floats();
-      num_passed++;
-
-      floats_have_a_size();
-      num_passed++;
-
-      going_double_precision();
-      num_passed++;
-
-      doubles_have_a_size();
-      num_passed++;
-
-      size_of_biggest_number();
-      num_passed++;
-      
-      return num_passed;
+      status->episode_done( "second" );
     }
 
+    /**
+     *
+     */
     static int get_num_tests() {
       return num_tests;
     }
 
   private:
+    // REMARK: Do not forget to increase this.num_tests when you add another koan
     void simple_integer_numbers();
     void integers_have_a_size();
     void integers_can_be_negative();

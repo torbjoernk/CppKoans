@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2012 <copyright holder> <email>
+    Copyright (c) 2012 Torbjörn Klatt <opensource@torbjoern-klatt.de>
 
     Permission is hereby granted, free of charge, to any person
     obtaining a copy of this software and associated documentation
@@ -29,44 +29,47 @@
 void Koan01_variable_types::simple_integer_numbers()
 {
   int an_integer = 42;
-  assert( an_integer == FILL_THE_NUMBER_IN );
+  ASSERT( an_integer == FILL_THE_NUMBER_IN );
 }
 
 void Koan01_variable_types::integers_have_a_size()
 {
   int an_integer = 1;
-  assert( sizeof( int ) == FILL_THE_NUMBER_IN );
-  assert( sizeof( an_integer ) == FILL_THE_NUMBER_IN );
+  ASSERT( sizeof( int ) == FILL_THE_NUMBER_IN );
+  ASSERT( sizeof( an_integer ) == FILL_THE_NUMBER_IN );
 }
 
 void Koan01_variable_types::integers_can_be_negative()
 {
   int an_integer = 42;
   int another_integer = -42;
-  assert( an_integer < another_integer );
+  ASSERT( an_integer < another_integer );
 }
 
 void Koan01_variable_types::simple_floats()
 {
   float a_float = 4.2;
-  assert( a_float == FILL_THE_NUMBER_IN );
+  ASSERT( a_float == FILL_THE_NUMBER_IN );
 }
 
 void Koan01_variable_types::floats_have_a_size()
 {
   int a_float = 4.2;
-  assert( sizeof( float ) == FILL_THE_NUMBER_IN );
-  assert( sizeof( a_float ) == FILL_THE_NUMBER_IN );
+  ASSERT( sizeof( float ) == FILL_THE_NUMBER_IN );
+  ASSERT( sizeof( a_float ) == FILL_THE_NUMBER_IN );
 }
 
 void Koan01_variable_types::going_double_precision()
 {
-
+  double a_famous_double = 3.1415926535897932;
+  ASSERT_MSG( a_famous_double == FILL_THE_NUMBER_IN, "You know that number." );
 }
 
 void Koan01_variable_types::doubles_have_a_size()
 {
-
+  double a_famous_double = 3.1415926535897932;
+  ASSERT( sizeof( double ) == FILL_THE_NUMBER_IN );
+  ASSERT( sizeof( a_famous_double ) == FILL_THE_NUMBER_IN );
 }
 
 void Koan01_variable_types::size_of_biggest_number()
@@ -74,8 +77,8 @@ void Koan01_variable_types::size_of_biggest_number()
   // Remember: The size of long doubles vary from system to system.
   long double a_long_double = 4.2;
   // How big is it on your system?
-  assert( sizeof( long double ) == FILL_THE_NUMBER_IN );
-  assert( sizeof( a_long_double ) == FILL_THE_NUMBER_IN );
+  ASSERT( sizeof( long double ) == FILL_THE_NUMBER_IN );
+  ASSERT( sizeof( a_long_double ) == FILL_THE_NUMBER_IN );
 }
 
 

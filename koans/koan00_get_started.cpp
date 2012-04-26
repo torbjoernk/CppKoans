@@ -34,7 +34,7 @@ void Koan00_get_started::cpp_is_not_too_hard()
        << "Then go to the source file of the first error." << endl
        << "And make the test pass." << endl
        << "We start right here:" << endl;
-  assert( false );
+  ASSERT_MSG( false, "This should be true." );
   cout << "That was easy, wasn't it?" << endl
        << "Go on while you walk the path to enlightment ..." << endl;
 }

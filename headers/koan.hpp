@@ -23,34 +23,18 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include <iostream>
-#include "headers/koan_handler.hpp"
-#include "headers/all_koans.hpp"
+#ifndef KOAN_HPP
+#define KOAN_HPP
+
+#include <string>
 
 using namespace std;
 
 /**
  *
  */
-int main()
-{
-  KoanHandler status;
+class Koan {};
 
-  // Koan 00: getting started
-  Koan00_get_started koan00 = Koan00_get_started( &status );
-
-  // Koan 01: variable types
-  Koan01_variable_types koan01 = Koan01_variable_types( &status );
-
-  // Welcome message
-  status.start();
-
-  // The Path of Enlightment
-  koan00.run();
-  koan01.run();
-
-  // Done.
-  return( 0 );
-}
+#endif // KOAN_HPP
 
 // EOF

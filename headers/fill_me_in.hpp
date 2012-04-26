@@ -23,34 +23,30 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include <iostream>
-#include "headers/koan_handler.hpp"
-#include "headers/all_koans.hpp"
+#ifndef FILL_ME_IN_HPP
+#define FILL_ME_IN_HPP
 
 using namespace std;
 
-/**
- *
- */
-int main()
+class FillMeIn
 {
-  KoanHandler status;
+  public:
+    string file;
+    int line;
+    string msg;
+    FillMeIn( const string f, const int l, string s ) : file( f ), line( l ), msg( s ) {
+      file = file.substr( file.find_last_of( "/" ) + 1 );
+    }
+    ~FillMeIn() {}
+};
 
-  // Koan 00: getting started
-  Koan00_get_started koan00 = Koan00_get_started( &status );
+#define ASSERT_MSG(expr, msg) do {                \
+    if (!(expr))                                    \
+    {                                               \
+      throw FillMeIn(__FILE__, __LINE__, msg);      \
+    };                                              \
+  } while(0)
 
-  // Koan 01: variable types
-  Koan01_variable_types koan01 = Koan01_variable_types( &status );
+#define ASSERT(expr) ASSERT_MSG(expr, "")
 
-  // Welcome message
-  status.start();
-
-  // The Path of Enlightment
-  koan00.run();
-  koan01.run();
-
-  // Done.
-  return( 0 );
-}
-
-// EOF
+#endif

@@ -11,6 +11,7 @@ add_definitions(
 set(cppkoans_SOURCES
   ${PROJECT_SOURCE_DIR}/cppkoans.cpp
   ${PROJECT_SOURCE_DIR}/helper.hpp
+  ${PROJECT_SOURCE_DIR}/headers/koan_handler.cpp
 )
 
 add_subdirectory(koans)

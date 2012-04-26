@@ -23,9 +23,15 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
+#include <string>
 #include <iostream>
 #include <cassert>
 
+#include "headers/fill_me_in.hpp"
+#include "headers/koan.hpp"
+#include "headers/koan_handler.hpp"
+
 #define FILL_THE_NUMBER_IN 1
+
 
 // EOF

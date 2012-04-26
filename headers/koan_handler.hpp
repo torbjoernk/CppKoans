@@ -23,34 +23,63 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
+
+#ifndef KOAN_HANDLER_HPP
+#define KOAN_HANDLER_HPP
+
 #include <iostream>
-#include "headers/koan_handler.hpp"
-#include "headers/all_koans.hpp"
+#include "fill_me_in.hpp"
+#include "koan.hpp"
 
 using namespace std;
 
 /**
  *
  */
-int main()
+class KoanHandler
 {
-  KoanHandler status;
+  private:
+    int total_num_koans;    //!
+    int total_num_passed;   //!
 
-  // Koan 00: getting started
-  Koan00_get_started koan00 = Koan00_get_started( &status );
+  public:
+    /**
+     *
+     */
+    KoanHandler();
 
-  // Koan 01: variable types
-  Koan01_variable_types koan01 = Koan01_variable_types( &status );
+    /**
+     *
+     */
+    void eval_koan( Koan obj, void ( Koan::*koan )() );
 
-  // Welcome message
-  status.start();
+    /**
+     *
+     */
+    void register_koans( int num_koans );
 
-  // The Path of Enlightment
-  koan00.run();
-  koan01.run();
+    /**
+     *
+     */
+    void start();
 
-  // Done.
-  return( 0 );
-}
+    /**
+     *
+     */
+    void episode_done( string order );
+
+  private:
+    /**
+     *
+     */
+    void print_congrats( string order );
+
+    /**
+     *
+     */
+    void print_failure( string file, int line, string msg );
+};
+
+#endif // KOAN_HANDLER_HPP
 
 // EOF
