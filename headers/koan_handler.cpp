@@ -74,7 +74,7 @@ void KoanHandler::print_failure( FillMeInException ex )
   cout << "The master says, that you should meditate on '" << ex.file << ":"
        << ex.line << "'." << endl
        << endl;
-  if ( !ex.expect.empty() ) {
+  if( !ex.expect.empty() ) {
     cout << "The master expected " << ex.expect << "." << endl;
   }
   cout << "You mastered " << this->total_num_passed << " of "

@@ -54,7 +54,7 @@ class Koan02_character_types : Koan
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan02_character_types::chars_have_a_size ) );
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan02_character_types::chars_are_numbers ) );
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan02_character_types::more_characters_are_strings ) );
-      
+
       status->episode_done( "third" );
     }
 
