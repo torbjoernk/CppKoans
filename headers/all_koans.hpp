@@ -25,5 +25,6 @@
 
 #include "koan00_get_started.hpp"
 #include "koan01_number_types.hpp"
+#include "koan02_character_types.hpp"
 
 // EOF

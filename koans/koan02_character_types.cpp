@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2012 Torbjörn Klatt <opensource@torbjoern-klatt.de>
+    Copyright (c) 2012 <copyright holder> <email>
 
     Permission is hereby granted, free of charge, to any person
     obtaining a copy of this software and associated documentation
@@ -23,38 +23,8 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include <iostream>
-#include "headers/koan_handler.hpp"
-#include "headers/all_koans.hpp"
 
-using namespace std;
+#include "../headers/koan02_character_types.hpp"
 
-/**
- *
- */
-int main()
-{
-  KoanHandler status;
-
-  // Koan 00: getting started
-  Koan00_get_started koan00 = Koan00_get_started( &status );
-
-  // Koan 01: number types
-  Koan01_number_types koan01 = Koan01_number_types( &status );
-
-  // Koan 02: character types
-  Koan02_character_types koan02 = Koan02_character_types( &status );
-
-  // Welcome message
-  status.start();
-
-  // The Path of Enlightment
-  koan00.run();
-  koan01.run();
-  koan02.run();
-
-  // Done.
-  return( 0 );
-}
 
 // EOF

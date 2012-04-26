@@ -23,38 +23,47 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include <iostream>
-#include "headers/koan_handler.hpp"
-#include "headers/all_koans.hpp"
+#include "../helper.hpp"
 
-using namespace std;
+#ifndef KOAN02_CHARACTER_TYPES_HPP
+#define KOAN02_CHARACTER_TYPES_HPP
 
-/**
- *
- */
-int main()
+class Koan02_character_types : Koan
 {
-  KoanHandler status;
+  private:
+    KoanHandler *status;                //!
+    static const int num_tests = 0;     //!
 
-  // Koan 00: getting started
-  Koan00_get_started koan00 = Koan00_get_started( &status );
+  public:
+    /**
+     *
+     */
+    Koan02_character_types( KoanHandler *status ) : status( status ) {
+      status->register_koans( num_tests );
+    }
+    /**
+     *
+     */
+    ~Koan02_character_types() {}
 
-  // Koan 01: number types
-  Koan01_number_types koan01 = Koan01_number_types( &status );
+    /**
+     *
+     */
+    void run() {
+      status->episode_done( "third" );
+    }
 
-  // Koan 02: character types
-  Koan02_character_types koan02 = Koan02_character_types( &status );
+    /**
+     *
+     */
+    static int get_num_tests() {
+      return num_tests;
+    }
 
-  // Welcome message
-  status.start();
+  private:
+    // REMARK: Do not forget to increase this.num_tests when you add another koan
+};
 
-  // The Path of Enlightment
-  koan00.run();
-  koan01.run();
-  koan02.run();
-
-  // Done.
-  return( 0 );
-}
+#endif // KOAN02_CHARACTER_TYPES_HPP
 
 // EOF
