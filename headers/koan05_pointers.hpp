@@ -25,40 +25,35 @@
 
 #include "../helper.hpp"
 
-// Do not to forget to rename the preprocessor directives as well!
-#ifndef KOANXX_SAMPLE_KOANS_HPP
-#define KOANXX_SAMPLE_KOANS_HPP
+#ifndef KOAN05_POINTERS_HPP
+#define KOAN05_POINTERS_HPP
 
 // Rename the Episode
-class KoanXX_sample_koans : Koan
+class Koan05_pointers : Koan
 {
   private:
     KoanHandler *status;                //!
-    // When ever a koan is added at the very bottom, this counter needs to be
-    // increased.
     static const int num_tests = 1;     //!
 
   public:
     /**
      *
      */
-    KoanXX_sample_koans( KoanHandler *status ) : status( status ) {
+    Koan05_pointers( KoanHandler *status ) : status( status ) {
       status->register_koans( num_tests );
     }
     /**
      *
      */
-    ~KoanXX_sample_koans() {}
+    ~Koan05_pointers() {}
 
     /**
      *
      */
     void run() {
-      // For each koan in this episode, one line needs to be written.
-      // The koans are executed in the order they are called here.
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &KoanXX_sample_koans::a_sample_koan ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan05_pointers::a_sample_koan ) );
 
-      status->episode_done( "the-so-and-so'th" );
+      status->episode_done( "fifth" );
     }
 
     /**
@@ -69,12 +64,10 @@ class KoanXX_sample_koans : Koan
     }
 
   private:
-    // Add further Koans down here by defining their name.
-    // The implementation of these is done in ~/koans/koanXX_sample_koans.cpp
     // REMARK: Do not forget to increase this.num_tests when you add another koan
     void a_sample_koan();
 };
 
-#endif // KOANXX_SAMPLE_KOANS_HPP
+#endif // KOAN05_POINTERS_HPP
 
 // EOF
