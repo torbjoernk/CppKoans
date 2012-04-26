@@ -27,7 +27,7 @@
 #include <iostream>
 #include <cassert>
 
-#include "headers/fill_me_in.hpp"
+#include "headers/fill_me_in_exception.hpp"
 #include "headers/koan.hpp"
 #include "headers/koan_handler.hpp"
 

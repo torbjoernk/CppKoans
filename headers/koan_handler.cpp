@@ -37,8 +37,8 @@ void KoanHandler::eval_koan( Koan obj, void ( Koan::*koan )() )
   try {
     ( obj.*koan )();
     this->total_num_passed++;
-  } catch( FillMeIn ex ) {
-    this->print_failure( ex.file, ex.line, ex.msg );
+  } catch( FillMeInException ex ) {
+    this->print_failure( ex );
     exit( 1 );
   }
 }
@@ -66,15 +66,18 @@ void KoanHandler::print_congrats( string order )
        << "Don't loose concentration. Keep going!" << endl;
 }
 
-void KoanHandler::print_failure( string file, int line, string msg )
+void KoanHandler::print_failure( FillMeInException ex )
 {
-  if( !msg.empty() ) {
-    cout << msg << endl;
+  if( !ex.msg.empty() ) {
+    cout << "Note:\t" << ex.msg << endl;
   }
-  cout << "The master says, that you should meditate on " << file << ":"
-       << line << "." << endl
-       << endl
-       << "You mastered " << this->total_num_passed << " of "
+  cout << "The master says, that you should meditate on '" << ex.file << ":"
+       << ex.line << "'." << endl
+       << endl;
+  if ( !ex.expect.empty() ) {
+    cout << "The master expected " << ex.expect << "." << endl;
+  }
+  cout << "You mastered " << this->total_num_passed << " of "
        << this->total_num_koans << " koans. Keep going!" << endl;
 }
 

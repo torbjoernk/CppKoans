@@ -28,7 +28,7 @@
 #define KOAN_HANDLER_HPP
 
 #include <iostream>
-#include "fill_me_in.hpp"
+#include "fill_me_in_exception.hpp"
 #include "koan.hpp"
 
 using namespace std;
@@ -77,7 +77,7 @@ class KoanHandler
     /**
      *
      */
-    void print_failure( string file, int line, string msg );
+    void print_failure( FillMeInException ex );
 };
 
 #endif // KOAN_HANDLER_HPP
