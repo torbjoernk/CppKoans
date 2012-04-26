@@ -2,7 +2,7 @@
 
 Inspired by [RubyKoans](https://github.com/edgecase/ruby_koans) and 
 [JavaScript-Koans](https://github.com/liammclennan/JavaScript-Koans), this is
-an attemt to write such koans for C/C++.
+an attempt to write such koans for C/C++.
 
 Some ideas were taken from [PointerKoans](https://github.com/paytonrules/PointerKoan).
 
