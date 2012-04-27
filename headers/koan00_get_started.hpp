@@ -55,7 +55,10 @@ class Koan00_get_started : Koan
      *
      */
     void run() {
+      status->episode_start( "first" );
+      
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan00_get_started::cpp_is_not_too_hard ) );
+      
       status->episode_done( "first" );
     }
 

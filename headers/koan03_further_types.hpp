@@ -50,6 +50,8 @@ class Koan03_further_types : Koan
      *
      */
     void run() {
+      status->episode_start( "fourth" );
+      
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan03_further_types::the_truth_has_a_name ) );
 
       status->episode_done( "fourth" );

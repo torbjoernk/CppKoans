@@ -66,14 +66,19 @@ class KoanHandler
     /**
      *
      */
-    void episode_done( string order );
+    void end();
 
-  private:
     /**
      *
      */
-    void print_congrats( string order );
+    void episode_start( string order );
 
+    /**
+     *
+     */
+    void episode_done( string order );
+
+  private:
     /**
      *
      */

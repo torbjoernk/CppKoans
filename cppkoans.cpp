@@ -70,6 +70,7 @@ int main()
 //   koanXX.run();
 
   // Done.
+  status.end();
   return( 0 );
 }
 

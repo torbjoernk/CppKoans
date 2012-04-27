@@ -32,7 +32,7 @@ class Koan04_arrays : Koan
 {
   private:
     KoanHandler *status;                //!
-    static const int num_tests = 1;     //!
+    static const int num_tests = 2;     //!
 
   public:
     /**
@@ -50,9 +50,12 @@ class Koan04_arrays : Koan
      *
      */
     void run() {
+      status->episode_start( "fifth" );
+      
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan04_arrays::listing_things ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan04_arrays::arrays_are_rigid ) );
 
-      status->episode_done( "fourth" );
+      status->episode_done( "fifth" );
     }
 
     /**
@@ -65,6 +68,7 @@ class Koan04_arrays : Koan
   private:
     // REMARK: Do not forget to increase this.num_tests when you add another koan
     void listing_things();
+    void arrays_are_rigid();
 };
 
 #endif // KOAN04_ARRAYS_HPP

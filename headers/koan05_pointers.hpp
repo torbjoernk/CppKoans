@@ -51,12 +51,14 @@ class Koan05_pointers : Koan
      *
      */
     void run() {
+      status->episode_start( "sixth" );
+      
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan05_pointers::they_are_just_variables ) );
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan05_pointers::they_are_really_just_variables ) );
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan05_pointers::they_have_power ) );
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan05_pointers::they_are_not_almighty ) );
 
-      status->episode_done( "fifth" );
+      status->episode_done( "sixth" );
     }
 
     /**

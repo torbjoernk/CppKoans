@@ -53,6 +53,8 @@ class Koan01_number_types : Koan
      *
      */
     void run() {
+      status->episode_start( "second" );
+      
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_number_types::simple_integer_numbers ) );
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_number_types::integers_have_a_size ) );
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan01_number_types::integers_can_be_negative ) );
