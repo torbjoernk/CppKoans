@@ -33,7 +33,7 @@ class Koan05_pointers : Koan
 {
   private:
     KoanHandler *status;                //!
-    static const int num_tests = 1;     //!
+    static const int num_tests = 4;     //!
 
   public:
     /**
@@ -51,7 +51,10 @@ class Koan05_pointers : Koan
      *
      */
     void run() {
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan05_pointers::a_sample_koan ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan05_pointers::they_are_just_variables ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan05_pointers::they_are_really_just_variables ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan05_pointers::they_have_power ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan05_pointers::they_are_not_almighty ) );
 
       status->episode_done( "fifth" );
     }
@@ -65,7 +68,10 @@ class Koan05_pointers : Koan
 
   private:
     // REMARK: Do not forget to increase this.num_tests when you add another koan
-    void a_sample_koan();
+    void they_are_just_variables();
+    void they_are_really_just_variables();
+    void they_have_power();
+    void they_are_not_almighty();
 };
 
 #endif // KOAN05_POINTERS_HPP

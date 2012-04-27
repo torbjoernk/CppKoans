@@ -33,5 +33,6 @@
 
 #define FILL_THE_NUMBER_IN 0
 #define FILL_THE_CHAR_IN ' '
+#define THIS_IS_NOT_NULL NULL
 
 // EOF
