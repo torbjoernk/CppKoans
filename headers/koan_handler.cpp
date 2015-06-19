@@ -75,7 +75,7 @@ void KoanHandler::episode_start( string order )
 void KoanHandler::episode_done( string order )
 {
   cout << "****\tCongratulations! You mastered the " << order << " episode." << endl
-       << "****\tDon't loose concentration. Keep going!" << endl
+       << "****\tDon't lose concentration. Keep going!" << endl
        << endl;
 }
 
