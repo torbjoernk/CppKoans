@@ -54,7 +54,7 @@ void Koan01_number_types::simple_floats()
 
 void Koan01_number_types::floats_have_a_size()
 {
-  int a_float = 4.2;
+  float a_float = 4.2;
   ASSERT_EQUAL( sizeof( float ), FILL_THE_NUMBER_IN );
   ASSERT_EQUAL( sizeof( a_float ), FILL_THE_NUMBER_IN );
 }
