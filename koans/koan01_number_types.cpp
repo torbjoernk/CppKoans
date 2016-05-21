@@ -48,13 +48,13 @@ void Koan01_number_types::integers_can_be_negative()
 
 void Koan01_number_types::simple_floats()
 {
-  float a_float = 4.2;
+  float a_float = 4.2f;
   ASSERT_EQUAL( a_float, FILL_THE_NUMBER_IN );
 }
 
 void Koan01_number_types::floats_have_a_size()
 {
-  float a_float = 4.2;
+  float a_float = 4.2f;
   ASSERT_EQUAL( sizeof( float ), FILL_THE_NUMBER_IN );
   ASSERT_EQUAL( sizeof( a_float ), FILL_THE_NUMBER_IN );
 }

@@ -58,7 +58,7 @@ class FillMeInException
     if (!(a == b))                                                        \
     {                                                                     \
       std::ostringstream expect;\
-      expect << a;\
+      expect << a;										\
       throw FillMeInException(__FILE__, __LINE__, msg, expect.str());   \
     };                                                                    \
   } while(0)

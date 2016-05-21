@@ -39,6 +39,10 @@ void KoanHandler::eval_koan( Koan obj, void ( Koan::*koan )() )
     this->total_num_passed++;
   } catch( FillMeInException ex ) {
     this->print_failure( ex );
+#ifdef WIN32
+    // make sure the console display stays on top until user presses a key
+    system("pause");
+#endif
     exit( 1 );
   }
 }
