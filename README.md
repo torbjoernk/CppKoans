@@ -50,8 +50,8 @@ Thus, walking the path to enlightment is a repetition of these steps:
 3. Read the master's reply with `./CppKoans/build/CppKoans`
 
 
-##Adding further Koans
-###To existing episodes
+## Adding further Koans
+### To existing episodes
 Just define a new `private void` function without parameters in the bottom
 section of the episode's header file it should belong to.
 Then go to the implementation file of that episode and implement your new koan.
@@ -59,7 +59,7 @@ Finally add your newly created koan to the `run()` function in the header file
 of that episode and increase the `num_tests` counter by one (or whatevery amount
 of koans you added).
 
-###New episodes
+### New episodes
 There is a sample episode, which can be used as a template for new episodes.
 After copying and renaming of `~/headers/koanXX_sample_koans.hpp` and
 `~/koans/koanXX_sample_koans.cpp` the following steps are necessary:
@@ -71,5 +71,5 @@ After copying and renaming of `~/headers/koanXX_sample_koans.hpp` and
 3. enable and activate the new episode in `~/cppkoans.cpp`
 
 
-##Licence
+## Licence
 MIT License Copyright 2012 Torbjörn Klatt - opensource eht torbjoern minus klatt dot de
