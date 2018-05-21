@@ -54,6 +54,9 @@ int main()
   // Koan 05: pointers
   Koan05_pointers koan05 = Koan05_pointers( &status );
 
+  // Koan 06: files
+  Koan06_files koan06 = Koan06_files( &status );
+
   // Koan XX: sample koans
 //   KoanXX_sample_koans koanXX = KoanXX_sample_koans( &status );
 
@@ -61,12 +64,13 @@ int main()
   status.start();
 
   // The Path of Enlightment
+  koan05.run();
+  koan06.run();
   koan00.run();
   koan01.run();
   koan02.run();
   koan03.run();
   koan04.run();
-  koan05.run();
 //   koanXX.run();
 
   // Done.
